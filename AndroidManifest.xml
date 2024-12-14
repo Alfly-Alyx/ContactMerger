@@ -10,7 +10,7 @@
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="34" />
 
     <application
         android:icon="@drawable/icon"
@@ -20,6 +20,7 @@
         <activity android:name="com.tundem.aboutlibraries.ui.LibsActivity" />
         <activity
             android:name=".MergeActivity"
+            android:exported="true"
             android:label="@string/title_activity_merge" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +34,8 @@
             android:name=".AnalyzerService"
             android:enabled="true" />
 
-        <receiver android:name=".AnalyzeReceiver" >
+        <receiver android:name=".AnalyzeReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
