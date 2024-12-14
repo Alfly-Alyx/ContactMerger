@@ -1,15 +1,21 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+
     repositories {
         mavenCentral()
+        google()
+        gradlePluginPortal()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.12.+'
+        classpath 'com.android.tools.build:gradle:7.4.1'
     }
 }
 
 repositories {
+    google()
     mavenCentral()
+    gradlePluginPortal()
     flatDir {
         dirs 'libs'
     }
@@ -20,15 +26,15 @@ apply plugin: 'android'
 sourceCompatibility = 1.7
 
 dependencies {
-    compile 'com.tundem.aboutlibraries:library:2.0.3@aar'
-    compile 'com.android.support:support-v4:+'
-    compile 'org.ow2.asm:asm:4.0'
-    compile 'com.esotericsoftware.kryo:kryo:2.24.0' 
-    compile 'org.apache.lucene:lucene-core:4.7.1'
-    compile 'org.apache.lucene:lucene-misc:4.7.1'
-    compile 'org.apache.lucene:lucene-queries:4.7.1'
-    compile 'org.apache.lucene:lucene-analyzers-common:4.7.1'
-    compile 'org.apache.lucene:lucene-codecs:4.7.1'
+    implementation 'com.tundem.aboutlibraries:library:2.0.3@aar'
+    implementation 'com.android.support:support-v4:+'
+    implementation 'org.ow2.asm:asm:4.0'
+    implementation 'com.esotericsoftware.kryo:kryo:2.24.0'
+    implementation 'org.apache.lucene:lucene-core:4.7.1'
+    implementation 'org.apache.lucene:lucene-misc:4.7.1'
+    implementation 'org.apache.lucene:lucene-queries:4.7.1'
+    implementation 'org.apache.lucene:lucene-analyzers-common:4.7.1'
+    implementation 'org.apache.lucene:lucene-codecs:4.7.1'
 }
 
 android {
